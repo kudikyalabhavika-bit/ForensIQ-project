@@ -1,0 +1,433 @@
+/* ===== Saved Cases Page Styles ===== */
+
+.saved-cases-page,
+.criminal-db-page {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Page header */
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.page-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(22, 29, 51, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+.page-btn:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+.page-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.page-btn.primary {
+  background: linear-gradient(135deg, var(--blue-500), var(--cyan-500));
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.page-btn.primary:hover {
+  box-shadow: 0 4px 16px rgba(0, 212, 255, 0.25);
+}
+
+/* Filter bar */
+.filter-bar,
+.db-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(22, 29, 51, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+.search-box svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.search-box input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+.search-box input::placeholder {
+  color: var(--text-muted);
+}
+.search-box input:focus {
+  outline: none;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 8px 16px;
+  background: rgba(22, 29, 51, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+.filter-chip:hover {
+  color: var(--text-primary);
+}
+.filter-chip.active {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.3);
+  color: var(--cyan-400);
+}
+
+/* DB select dropdowns */
+.db-select {
+  padding: 10px 14px;
+  background: rgba(22, 29, 51, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+.db-select:focus {
+  border-color: var(--cyan-400);
+}
+
+/* Sketch grid */
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.sketch-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.sketch-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.sketch-card-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(22, 29, 51, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.sketch-card-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sketch-preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.sketch-preview-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+.sketch-preview-placeholder.large svg {
+  width: 64px;
+  height: 64px;
+}
+
+.sketch-status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+  backdrop-filter: blur(8px);
+}
+.sketch-status-badge.active {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+.sketch-status-badge.generated {
+  background: rgba(0, 212, 255, 0.15);
+  color: var(--cyan-400);
+}
+.sketch-status-badge.closed {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--text-muted);
+}
+.sketch-status-badge.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+}
+
+.sketch-card-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sketch-card-id {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cyan-400);
+  font-family: var(--font-mono);
+}
+
+.sketch-card-sub-id {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.sketch-card-row {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.sketch-card-label {
+  color: var(--text-muted);
+  min-width: 80px;
+}
+
+.sketch-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 12px 16px 16px;
+}
+
+.sketch-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(22, 29, 51, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  justify-content: center;
+}
+.sketch-action-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.2);
+  color: var(--cyan-400);
+}
+.sketch-action-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sketch-action-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+.empty-state-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.empty-state-icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--cyan-400);
+  opacity: 0.5;
+}
+.empty-state h2 {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.empty-state p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* View sketch modal */
+.view-sketch-modal {
+  background: var(--navy-800);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.view-sketch-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+}
+.view-sketch-close:hover {
+  color: var(--text-primary);
+}
+.view-sketch-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.view-sketch-modal h2 {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.view-sketch-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(22, 29, 51, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.view-sketch-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.view-sketch-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.view-sketch-row {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.view-sketch-label {
+  color: var(--text-muted);
+  min-width: 90px;
+}
+
+.view-sketch-value {
+  color: var(--text-primary);
+}
+
+.view-sketch-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Toast action button */
+.toast-action-btn {
+  margin-left: 12px;
+  padding: 4px 12px;
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--cyan-400);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.toast-action-btn:hover {
+  background: rgba(0, 212, 255, 0.25);
+}

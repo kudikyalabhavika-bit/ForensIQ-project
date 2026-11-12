@@ -1,0 +1,59 @@
+
+# ==========================================
+# FORENSIQ - GIT IGNORE
+# ==========================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+node_modules/
+
+# Build files
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python virtual environments
+backend/venv/
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Generated sketches and output
+backend/output/
+
+# Uploaded files and local photos
+backend/uploads/
+backend/photos/

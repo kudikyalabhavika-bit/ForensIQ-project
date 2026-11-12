@@ -1,0 +1,245 @@
+/* ===== Criminal Database Page Styles ===== */
+
+/* DB stats grid */
+.db-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.db-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+}
+
+.db-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.db-stat-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.db-stat-icon.cyan {
+  background: rgba(0, 212, 255, 0.12);
+  color: var(--cyan-400);
+}
+.db-stat-icon.green {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--success);
+}
+.db-stat-icon.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--blue-400);
+}
+.db-stat-icon.gray {
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text-muted);
+}
+
+.db-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.db-stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* DB table */
+.db-table-wrap {
+  padding: 0;
+  overflow: hidden;
+}
+
+.db-table-scroll {
+  overflow-x: auto;
+}
+
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.db-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  background: rgba(15, 21, 37, 0.5);
+}
+
+.db-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.db-table tr:hover td {
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.db-criminal-id {
+  font-family: var(--font-mono);
+  color: var(--cyan-400);
+  font-weight: 500;
+}
+
+.db-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.db-case-id {
+  font-family: var(--font-mono);
+  color: var(--blue-400);
+}
+
+.db-time {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.db-action-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.db-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(22, 29, 51, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+.db-action-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.2);
+  color: var(--cyan-400);
+}
+.db-action-btn svg {
+  width: 14px;
+  height: 14px;
+}
+.db-action-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.db-no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px;
+  color: var(--text-muted);
+}
+.db-no-results svg {
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+/* Edit modal */
+.edit-modal {
+  background: var(--navy-800);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  max-width: 480px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.edit-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.edit-modal-header h2 {
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.edit-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+}
+.edit-modal-close:hover {
+  color: var(--text-primary);
+}
+.edit-modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.edit-modal-body {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edit-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.edit-field input,
+.edit-field select {
+  padding: 10px 14px;
+  background: rgba(22, 29, 51, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+}
+.edit-field input:focus,
+.edit-field select:focus {
+  border-color: var(--cyan-400);
+}
+
+.edit-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 16px 24px 24px;
+}

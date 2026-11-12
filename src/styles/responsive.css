@@ -1,0 +1,221 @@
+/* ===== Responsive Styles ===== */
+
+/* ===== App Shell / Sidebar / Topbar responsive ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .app-sidebar {
+    width: 200px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dash-bottom {
+    grid-template-columns: 1fr;
+  }
+  .dash-right-col {
+    flex-direction: row;
+  }
+  .dash-quick-actions,
+  .dash-activity {
+    flex: 1;
+  }
+  .feature-sidebar {
+    width: 220px;
+  }
+  .control-sidebar {
+    width: 220px;
+  }
+  .toolbar-brand-text {
+    font-size: 14px;
+  }
+}
+
+/* Mobile + small tablet */
+@media (max-width: 768px) {
+  /* App sidebar becomes drawer */
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 45;
+  }
+
+  .topbar-menu-btn {
+    display: flex;
+  }
+  .topbar-brand {
+    display: none;
+  }
+  .topbar-search {
+    max-width: none;
+  }
+
+  /* Dashboard */
+  .dashboard-page {
+    padding: 20px 16px;
+  }
+  .dash-header-text h1 {
+    font-size: 22px;
+  }
+  .dash-header-text p {
+    font-size: 13px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .dash-right-col {
+    flex-direction: column;
+  }
+  .dash-recent-cases {
+    padding: 16px;
+  }
+
+  /* Sketch page */
+  .sketch-toolbar {
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 4px;
+    padding: 10px 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .toolbar-brand {
+    padding-right: 10px;
+    margin-right: 4px;
+  }
+  .toolbar-brand-text {
+    display: none;
+  }
+  .toolbar-group {
+    padding: 0 4px;
+  }
+  .toolbar-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  .toolbar-btn-text {
+    padding: 0 10px;
+    height: 32px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .zoom-display {
+    font-size: 12px;
+    min-width: 40px;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .feature-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background: rgba(10, 14, 26, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .feature-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .control-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 40;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    background: rgba(10, 14, 26, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .control-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .canvas-area {
+    padding: 70px 12px 12px;
+  }
+
+  .login-card {
+    padding: 36px 28px;
+  }
+  .login-brand h1 {
+    font-size: 24px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 20px;
+    max-width: 100%;
+  }
+  .login-brand h1 {
+    font-size: 22px;
+  }
+  .login-brand p {
+    font-size: 12px;
+  }
+  .field-input {
+    padding: 12px 14px 12px 42px;
+    font-size: 13px;
+  }
+  .login-btn {
+    padding: 13px;
+    font-size: 14px;
+  }
+  .toolbar-btn-text span {
+    display: none;
+  }
+  .toolbar-btn-text {
+    padding: 0 10px;
+  }
+  .toolbar-btn-text svg {
+    width: 18px;
+    height: 18px;
+  }
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+  .dash-header {
+    flex-direction: column;
+  }
+}
