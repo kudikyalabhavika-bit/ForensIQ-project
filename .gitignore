@@ -1,4 +1,5 @@
 
+
 # ==========================================
 # FORENSIQ - GIT IGNORE
 # ==========================================
@@ -55,5 +56,4 @@ backend/*.sqlite3
 backend/output/
 
 # Uploaded files and local photos
-backend/uploads/
-backend/photos/
+# These folders are now allowed to be tracked by Git
